@@ -9,6 +9,10 @@ class PostController extends Controller
 {
     public function index(Post $post)
     {
-        return $post->get();
+        // $test = $post->orderBy('updated_at', 'DESC')->limit(2)->toSql(); //確認用に追加
+        // dd($test); //確認用に追加
+
+        return view('posts.index')->with(['posts' => $post->getPaginateByLimit(2)]);
     }
 }
+?>
