@@ -1,9 +1,7 @@
-<!DOCTYPE HTML>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>Blog</title>
-    </head>
+<x-app-layout>
+    <x-slot name="header">
+        Blog Name
+    </x-slot>
     <body>
         <h1>Blog Name</h1>
         <form action="/posts" method="POST">
@@ -32,4 +30,4 @@
             <a href="/">戻る</a>
         </div>
     </body>
-</html>
+</x-app-layout>
