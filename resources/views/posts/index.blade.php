@@ -27,6 +27,16 @@
         <div class='loginName'>
             ログインユーザー:{{ Auth::user()->name }}
         <div>
+            
+        <div>
+            @foreach($questions as $question)
+                <div>
+                    <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                        {{ $question['title'] }}
+                    </a>
+                </div>
+            @endforeach
+        </div>
         <script>
             function deletePost(id) {
                 'use strict'
